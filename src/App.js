@@ -8,7 +8,7 @@ import LoadingBar from 'react-top-loading-bar'
 
 const App = ()=> {
   const pageSize = 5;
-  const apiKey = process.env.REACT_APP_NEWS_API
+  const apiKey = '8ca6d689100d4c7f8d37604f5fad9cd6'
   const [progress, setProgress] = useState(0)
  
     return (
@@ -19,7 +19,7 @@ const App = ()=> {
         height={3}
         color='#f11946'
         progress={progress} 
-      />
+        />
         <Switch>
           <Route exact path="/"><News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country="in" category="general"/></Route> 
           <Route exact path="/business"><News setProgress={setProgress} apiKey={apiKey} key="business" pageSize={pageSize} country="in" category="business"/></Route> 
